@@ -35,13 +35,4 @@ router.post('/', function(req, res){
   }
 })
 
-router.post('/review/modify', (req, res, next) => {
-
-}) //modify? update?
-
-
-router.get('/review/delete', (req, res, next) => {
-  
-})
-
-module.exports = router;
+module.exports = router;  
