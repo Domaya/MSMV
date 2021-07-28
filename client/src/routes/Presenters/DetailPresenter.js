@@ -126,7 +126,7 @@ const DetailPresenter = ({movieData, movieReviews, peoples, reviewOnChange, writ
             장르 : {movieData.genres}<p>
             국가 : {movieData.country}<p>
             상영시간 : {movieData.runningTime}
-            </p></p></p></p>
+            </p></p></p></p>            
             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
               <Tab eventKey="home" title="줄거리">
                 <MovieElement>{movieData.summary}</MovieElement>
