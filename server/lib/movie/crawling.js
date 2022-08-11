@@ -87,10 +87,11 @@ const parsingRecommend = async(keyword, result,callback) => {
         result.image = $(".mv_info_area").find("img").attr("src")
         result.summary = $(".story_area").find(".con_tx").text()
         
-        if(!result.title){
-            let title = $(".mv_info_area").find(".h_movie").text()
-            title = title.replace(/(\r\n\t|\n|\r\t|\t)/gm,"")
-            result.title = title
+        result.title = $(".mv_info").find(`h3>a`).text()
+        if(result.title.includes('상영중')){
+            result.title = result.title.split('상영중')[0];
+        }else{
+            result.title = result.title.substring(0,result.title.length/2);
         }
         if(genre===date){
             result.date = "정보 없음";

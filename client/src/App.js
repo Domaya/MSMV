@@ -38,15 +38,13 @@ function App() {
   const [isLoginChecked, setIsLoginChecked] = useState(false);
   const loginCheck = async () => {
     await axios.get(`${process.env.REACT_APP_SERVER_URL}/auth/login`, { withCredentials: true })
-    .then(async (result) => {
-        await store.dispatch({ type: 'LOGIN', user: result.data.data });
+    .then(async (response) => {
+        await store.dispatch({ type: 'LOGIN', user: response.data.result });
         setIsLoginChecked(true);
       })
-    .catch((error) => {
+    .catch(() => {
       setIsLoginChecked(true);
     });
-    
-
   };
 
 
