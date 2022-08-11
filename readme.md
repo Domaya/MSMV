@@ -8,6 +8,7 @@
 
 ## 사용 기술
 Back-end : Node.js + express, flask, MySQL
+
 Front-end : React.js
 
 ```
